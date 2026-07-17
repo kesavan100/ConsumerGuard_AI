@@ -1,0 +1,2 @@
+# Enforce Linux line endings (LF) for shell scripts so they don't crash on Azure
+*.sh text eol=lf
