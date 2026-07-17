@@ -1,0 +1,32 @@
+# ConsumerGuard AI — .gitignore
+
+# Secret files (never commit these)
+.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Streamlit cache
+.streamlit/
+
+# NOTE: chroma_db/ is intentionally NOT ignored.
+# We ship the pre-built vector DB with the application.
+# This avoids rebuilding on every Azure cold start.

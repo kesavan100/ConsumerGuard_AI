@@ -1,0 +1,26 @@
+# ConsumerGuard AI — Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# --- Streamlit (frontend) ---
+streamlit==1.40.2
+
+# --- PDF parsing ---
+pypdf==4.3.1
+
+# --- Embedding model (runs locally, no API needed) ---
+sentence-transformers==3.3.1
+
+# --- Vector store ---
+# ChromaDB requires chroma-hnswlib which has NO pre-built Windows wheel for Python 3.12
+# and requires Microsoft C++ Build Tools to compile. Instead, we use a pure-numpy
+# vector store (consumerguard/vectorstore.py) — zero compilation, works on Windows
+# and Azure Linux identically, and is fast enough for ~300 policy chunks.
+
+# --- Gemini API (LLM for final response generation) ---
+google-generativeai==0.8.3
+
+# --- Environment variable management ---
+python-dotenv==1.0.1
+
+# --- Utility ---
+numpy==1.26.4
